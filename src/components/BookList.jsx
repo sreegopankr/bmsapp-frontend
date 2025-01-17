@@ -11,6 +11,8 @@ const BookList = () => {
     const fetchBooks = async () => {
       const response = await fetch(`http://localhost:8080/api/books`);
       const data = await response.json();
+
+      // console.log(`here: ${process.env.REACT_APP_API_URL}`)
       console.log(data)
       
       // Calculate total pages based on the data length
