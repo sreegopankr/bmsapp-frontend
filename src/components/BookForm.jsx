@@ -19,6 +19,7 @@ const BookForm = ({ onSubmit }) => {
   useEffect(() => {
     if (message) {
       alert(message);
+      setMessage('');
     }
   }, [message]);
 
@@ -45,7 +46,7 @@ const BookForm = ({ onSubmit }) => {
   const handleBookSubmit = async (bookData) => {
     // Send a POST request to the backend API to save the book in MongoDB
     try {
-      await axios.post('http://localhost:8080/api/books', bookData);  // Backend API to save book
+      await axios.post('https://bmsapp-production.up.railway.app/api/books', bookData);  // Backend API to save book
       setMessage('Book added successfully!');
       setFormData({
         title: '',

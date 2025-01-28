@@ -13,10 +13,10 @@ const BookDetails = () => {
   useEffect(() => {
     const fetchBookData = async () => {
       try {
-        const response = await axios.get(`http://localhost:8080/api/books/${id}`);
+        const response = await axios.get(`https://bmsapp-production.up.railway.app/api/books/${id}`);
         setBook(response.data);
 
-        const externalResponse = await axios.get(`http://localhost:8080/api/books/details/${response.data.isbn}`);
+        const externalResponse = await axios.get(`https://bmsapp-production.up.railway.app/api/books/details/${response.data.isbn}`);
         const externalItems = externalResponse.data.items || [];
         if (externalItems.length > 0) {
           const externalData = externalItems[0].volumeInfo;

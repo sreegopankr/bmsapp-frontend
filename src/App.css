@@ -25,3 +25,22 @@
   font-weight: 600;
   color: rgb(65, 62, 62);
 }
+
+.sort-buttons{
+  display: flex;
+  gap: 10px;
+}
+
+.flex-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.flex-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
